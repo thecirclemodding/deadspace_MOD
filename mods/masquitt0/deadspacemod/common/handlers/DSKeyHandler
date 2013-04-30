@@ -1,0 +1,59 @@
+package mods.masquitt0.deadspacemod.common.handlers;
+
+import java.util.EnumSet;
+import org.lwjgl.input.Keyboard;
+
+import mods.masquitt0.deadspacemod.common.deadspacemod;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.src.ModLoader;
+import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import cpw.mods.fml.client.registry.KeyBindingRegistry.KeyHandler;
+import cpw.mods.fml.common.TickType;
+
+public class DSKeyHandler extends KeyHandler {
+  
+	Minecraft mc = ModLoader.getMinecraftInstance();
+    static KeyBinding quickHeal = new KeyBinding("QuickHeal", Keyboard.KEY_A);
+
+    public DSKeyHandler() {
+            //the first value is an array of KeyBindings, the second is whether or not the call 
+            //keyDown should repeat as long as the key is down
+            super(new KeyBinding[]{quickHeal}, new boolean[]{false});
+    }
+
+    @Override
+    public String getLabel() {
+            return "Quick Heal";
+    }
+
+    @Override
+    public void keyDown(EnumSet<TickType> types, KeyBinding kb,
+                    boolean tickEnd, boolean isRepeat)
+    {    	
+    	
+		this.useMedPackSmall();
+    }
+
+    @Override
+    public void keyUp(EnumSet<TickType> types, KeyBinding kb, boolean tickEnd) 
+    {
+    	//SOME ACTION HERE.
+    }
+
+    @Override
+    public EnumSet<TickType> ticks() {
+            return EnumSet.of(TickType.CLIENT);
+            //I am unsure if any different TickTypes have any different effects.
+    }
+    
+	private void useMedPackSmall() 
+    {	
+    }  
+}
