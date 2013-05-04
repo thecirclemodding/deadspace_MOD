@@ -1,12 +1,12 @@
 Downloads for the Dead Space mod
 ================================
 
-BETA 0.0.2
+BETA 0.2.0
 ==========
-Adfly   (TBA)
-Direct  (TBA)
+Adfly   ()
+Direct  (http://www.mediafire.com/?2gl85t4pvn84obv)
 
-BETA 0.0.1
+BETA 0.1.0
 ==========
 Adfly  (http://adf.ly/NPGVv)
 Direct (http://www.mediafire.com/?k9qk9e9rbqmkcbd)
